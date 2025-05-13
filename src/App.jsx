@@ -374,13 +374,13 @@ gsap.from(project.chars, {
         // duration: 1,
         opacity: 0,
         y: 70,
-        stagger: 0.1,
+        // stagger: 0.1,
         ease: "back.out",
         scrollTrigger: {
           trigger: aboutPara.words,
           markers: false,
-          start: "4100% 100%",
-          end: "4300% 95%",
+          start: "2900% 80%",
+          end: "3000% 70%",
           scrub: 1,
         },
       });
