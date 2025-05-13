@@ -101,20 +101,23 @@ function App() {
         },
       });
 
-      gsap.from(aboutPara.words, {
+       gsap.from(aboutPara.words, {
         // duration: 1,
         opacity: 0,
         y: 70,
-        // stagger: 0.1,
+        stagger: 0.1,
         ease: "back.out",
+        pin:true,
         scrollTrigger: {
           trigger: aboutPara.words,
           markers: false,
-          start: "2900% 80%",
-          end: "2900% 80%",
-          scrub: 1,
+          start: "3600% 100%",
+          end: "3700% 100%",
+          scrub: 1.5,
         },
       });
+
+     
       gsap.from(threeText.words, {
         // duration: 1,
         opacity: 0,
@@ -124,8 +127,8 @@ function App() {
         scrollTrigger: {
           trigger: threeText.words,
           markers: false,
-          start: "2700% 0%",
-          end: "2900% 0%",
+          start: "3500% 50%",
+          end: "3600% 40%",
           scrub: 1,
         },
       });
@@ -365,26 +368,26 @@ gsap.from(project.chars, {
         scrollTrigger: {
           trigger: aboutME.chars,
           markers: false,
-          start: "800% 0%",
-          end: "1000% 0%",
+          start: "1300% 0%",
+          end: "1500% 0%",
           scrub: 1,
         },
       });
-
-      gsap.from(aboutPara.words, {
+ gsap.from(aboutPara.words, {
         // duration: 1,
         opacity: 0,
         y: 70,
-        // stagger: 0.1,
+        stagger: 0.1,
         ease: "back.out",
         scrollTrigger: {
           trigger: aboutPara.words,
           markers: false,
-          start: "2900% 80%",
-          end: "2900% 80%",
-          scrub: 1,
+          start: "4000% 100%",
+          end: "4100% 90%",
+          scrub: 1.5,
         },
       });
+    
 
       gsap.from(threeText.words, {
         // duration: 1,
@@ -395,8 +398,8 @@ gsap.from(project.chars, {
         scrollTrigger: {
           trigger: threeText.words,
           markers: false,
-          start: "2700% 0%",
-          end: "2900% 0%",
+          start: "3700% 80%",
+          end: "3800% 70%",
           scrub: 1,
         },
       });
@@ -635,8 +638,8 @@ gsap.from(project.chars, {
         scrollTrigger: {
           trigger: aboutME.chars,
           markers: false,
-          start: "2000% 0%",
-          end: "2200% 0%",
+          start: "1500% 30%",
+          end: "1600% 20%",
           scrub: 1,
         },
       });
@@ -650,8 +653,8 @@ gsap.from(project.chars, {
         scrollTrigger: {
           trigger: aboutPara.words,
           markers: false,
-          start: "4000% 0%",
-          end: "4600% 0%",
+          start: "4000% 100%",
+          end: "4600% 90%",
           scrub: 1.5,
         },
       });
@@ -665,8 +668,8 @@ gsap.from(project.chars, {
         scrollTrigger: {
           trigger: threeText.words,
           markers: false,
-          start: "3300% 0%",
-          end: "3500% 0%",
+          start: "2500% 0%",
+          end: "2600% 0%",
           scrub: 1,
         },
       });
@@ -884,7 +887,7 @@ gsap.from(project.chars, {
       media.revert(); // important to avoid memory leaks
     };
 
-    // let text = document.querySelector("#firstText");
+    
     // gsap.set(text, { opacity: 1 });
     // let mySplitText = SplitText.create(text, {
     //   type: "chars, words",
@@ -1031,7 +1034,7 @@ gsap.from(project.chars, {
         <div
         id="scrollContainer"
           ref={containerRef}
-          className="w-full h-screen  overflow-x-hidden    relative        "
+          className="w-full h-[100vh]  overflow-hidden    relative        "
         >
           <div
             id="section"
@@ -1090,8 +1093,8 @@ gsap.from(project.chars, {
             id="section"
             className="w-full h-screen absolute left-[200vw] top-0  bg-black flex justify-center items-center text-white"
           >
-            <div className="w-[100%] flex justify-center items-center h-[70%] ">
-              <h1 className="sectionThreeText text-[#F4CE14] font-extrabold text-[55px] sm:text-7xl md:text-[100px] lg:text-[130px] leading-[1] w-full text-center">
+            <div className="w-[100%] flex justify-center items-center h-[100%] ">
+              <h1 className="sectionThreeText text-[#F4CE14] font-extrabold text-[55px] sm:text-7xl md:text-[100px] lg:text-[130px] leading-[1] px-1 text-center">
                 I CONVERT <br /> WHAT-IF <br /> TO <br />
                 REALITY
               </h1>
