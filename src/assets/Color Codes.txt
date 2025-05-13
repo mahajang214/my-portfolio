@@ -1,0 +1,26 @@
+Color Codes
+60 : black-> #000000
+25 : gray -> #808080  darkGray: #333333
+10 : White -> #FFFFFF
+5 : yellow -> #FFDD00
+
+
+60 : black-> #000000
+25 : white -> #F7F7F7  
+10 : Chocloty -> #854836
+5 : yellow -> #FFB22C
+
+60 : black-> #45474B
+25 : white -> #F5F7F8  
+10 : pataNi -> #379777
+5 : yellow -> #F4CE14
+
+text-3xl sm:text-4xl
+
+
+w-[20vw] sm:w-[15vw] md:w-[12vw] lg:w-[10vw] xl:w-[7vw] 2xl:w-[6vw] h-auto
+
+//grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
+
+
+  <h1 className="text-[#16BECB] bg-[#161D2D] rounded-md px-3 py-1 mt-2">Tailwind-Css</h1>

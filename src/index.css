@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+.aboutPara{
+    font-family: 'Lobster Two';
+    src: url('../public/Lobster_Two/LobsterTwo-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    /* font-family: 'Lobster Two', cursive; */
+}
+.aboutHeading{
+    font-family: "Rubik Wet Paint";
+    src: url('../public/Rubik_Wet_Paint/RubikWetPaint-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+.sectionThreeText{
+    font-family: "Monoton";
+    src: url('../public/Monoton/Monoton-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+.techText{
+    font-family: "Abril Fatface";
+    src: url('../public/Abril_Fatface/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+.projectText{
+    font-family: "Paprika";
+    src: url('../public/Paprika/Paprika-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
