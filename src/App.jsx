@@ -1028,11 +1028,11 @@ gsap.from(project.chars, {
         <div
         id="scrollContainer"
           ref={containerRef}
-          className="w-full p-0 m-0 overflow-x-hidden    relative  h-screen      "
+          className="w-full p-0 m-0 overflow-x-hidden    relative  h-full      "
         >
           <div
             id="section"
-            className="w-full h-screen flex flex-col justify-center   items-center text-white"
+            className="w-full h-full flex flex-col justify-center   items-center text-white"
           >
             <h1
               id="firstText"
