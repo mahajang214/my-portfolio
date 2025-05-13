@@ -30,7 +30,7 @@ function App() {
     const smoother = ScrollSmoother.create({
       smooth: 1.5, // Adjust smoothness (higher = smoother)
       effects: true, // Enable effects for parallax and other animations
-      wrapper: 'body', // Apply smooth scroll to the body element
+      wrapper: '.wrapper', // Apply smooth scroll to the body element
       content: '.content', // The content that will be scrolled
     });
 
@@ -1039,7 +1039,7 @@ gsap.from(project.chars, {
 
   return (
     <>
-      <div className="w-full content mt-0 mb-0 p-2 overflow-hidden bg-black">
+      <div className="w-full wrapper mt-0 mb-0 p-2 overflow-hidden bg-black">
         <Nav />
         <div
         id="scrollContainer"
