@@ -104,13 +104,13 @@ function App() {
         // duration: 1,
         opacity: 0,
         y: 70,
-        stagger: 0.1,
+        // stagger: 0.1,
         ease: "back.out",
         scrollTrigger: {
           trigger: aboutPara.words,
           markers: false,
-          start: "3800% 100%",
-          end: "3900% 100%",
+          start: "2900% 80%",
+          end: "3000% 70%",
           scrub: 1,
         },
       });
