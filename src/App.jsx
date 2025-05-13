@@ -13,32 +13,18 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import Notification from "./Notification";
-import { ScrollSmoother } from "gsap/all";
 
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrambleTextPlugin);
-gsap.registerPlugin(ScrollSmoother);
+
 function App() {
   const containerRef = useRef(null);
   const fistText = useRef(null);
   const [openChattinWeb, setOpenChattinWeb] = useState(false);
   const [openSocialMediaWeb, setOpenSocialMediaWeb] = useState(false);
-  useEffect(() => {
-    // Initialize ScrollSmoother
-    const smoother = ScrollSmoother.create({
-      smooth: 1.5, // Adjust smoothness (higher = smoother)
-      effects: true, // Enable effects for parallax and other animations
-      wrapper: '.wrapper', // Apply smooth scroll to the body element
-      content: '.content', // The content that will be scrolled
-    });
 
-    return () => {
-      // Clean up on unmount
-      smoother.kill();
-    };
-  }, []);
 
   <Toaster position="top-right" reverseOrder={false} />
   useGSAP(() => {
