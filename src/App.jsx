@@ -972,7 +972,7 @@ gsap.from(project.chars, {
       return  setNotification({ type: "error", message: "Number is Empty." });
     }
     try {
-      const sendMail=await axios.post(`${meta.env.VITE_BASE_URL}/send-mail`,formData);
+      const sendMail=await axios.post(`${import.meta.env.VITE_BASE_URL}/send-mail`,formData);
       console.log(sendMail.data);
   
     return  setNotification({ type: "success", message: "Message sent successfully!" });
@@ -998,7 +998,7 @@ gsap.from(project.chars, {
       return  setNotification({ type: "error", message: "Feedback is Empty." });
     }
     try {
-      const sendFeedback=await axios.post(`${meta.env.VITE_BASE_URL}/feedback`,{message:msg});
+      const sendFeedback=await axios.post(`${import.meta.env.VITE_BASE_URL}/feedback`,{message:msg});
       console.log(sendFeedback.data);
   
       setNotification({ type: "success", message: "Feedback sended successfully!" });
