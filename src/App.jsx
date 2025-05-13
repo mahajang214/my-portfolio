@@ -1808,7 +1808,7 @@ gsap.from(project.chars, {
               Projects
             </h1>
             <div className="w-full mt-5 lg:mt-12  py-2 flex  flex-col justify-center items-center ">
-              <div
+              <div 
                 onMouseEnter={() => setOpenChattinWeb(!openChattinWeb)}
                 onMouseLeave={() => setOpenChattinWeb(!openChattinWeb)}
                 className="px-1 hover:transition-all duration-500 bg-[#ffffff23] rounded-2xl grid grid-cols-1  py-5"
@@ -1851,7 +1851,7 @@ gsap.from(project.chars, {
                         Socket.io, RESTful API, Jsonwebtoken.
                       </p>
                       <div className="w-full flex justify-center items-center">
-                        <button className="px-[10vw]  mt-3 py-2 rounded-2xl bg-[#379777] text-white cursor-pointer hover:scale-110 duration-200 hover:rounded-md">
+                        <button onClick={()=>window.open("https://github.com/mahajang214/Chatting-website")} className="px-[10vw]  mt-3 py-2 rounded-2xl bg-[#379777] text-white cursor-pointer hover:scale-110 duration-200 hover:rounded-md">
                           View Project
                         </button>
                       </div>
@@ -1909,7 +1909,7 @@ gsap.from(project.chars, {
                         Socket.io, RESTful API, Jsonwebtoken, Multer.
                       </p>
                       <div className="w-full flex justify-center items-center">
-                        <button className="px-[10vw]  mt-3 py-2 rounded-2xl bg-[#379777] text-white cursor-pointer hover:scale-110 duration-200 hover:rounded-md">
+                        <button onClick={()=>window.open("https://github.com/mahajang214/Social-Media-Web")} className="px-[10vw]  mt-3 py-2 rounded-2xl bg-[#379777] text-white cursor-pointer hover:scale-110 duration-200 hover:rounded-md">
                           View Project
                         </button>
                       </div>
