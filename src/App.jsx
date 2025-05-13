@@ -1093,7 +1093,7 @@ gsap.from(project.chars, {
             id="section"
             className="w-full h-screen absolute left-[194vw] top-0  bg-black flex justify-center items-center text-white"
           >
-            <div className="w-[100%] bg-gray-900 flex justify-center items-center h-[100%] ">
+            <div className="w-[100%]  flex justify-center items-center h-[100%] ">
               <h1 className="sectionThreeText text-[#F4CE14] font-extrabold text-[55px] sm:text-7xl md:text-[100px] lg:text-[130px] leading-[1] px-1 text-center">
                 I CONVERT <br /> WHAT-IF <br /> TO <br />
                 REALITY
