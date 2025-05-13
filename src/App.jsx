@@ -110,7 +110,7 @@ function App() {
           trigger: aboutPara.words,
           markers: false,
           start: "2900% 80%",
-          end: "3000% 70%",
+          end: "2900% 80%",
           scrub: 1,
         },
       });
@@ -380,7 +380,7 @@ gsap.from(project.chars, {
           trigger: aboutPara.words,
           markers: false,
           start: "2900% 80%",
-          end: "3000% 70%",
+          end: "2900% 80%",
           scrub: 1,
         },
       });
