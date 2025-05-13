@@ -15,16 +15,15 @@ import { Toaster } from 'react-hot-toast';
 import Notification from "./Notification";
 
 
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrambleTextPlugin);
-
 function App() {
   const containerRef = useRef(null);
   const fistText = useRef(null);
   const [openChattinWeb, setOpenChattinWeb] = useState(false);
   const [openSocialMediaWeb, setOpenSocialMediaWeb] = useState(false);
-
 
   <Toaster position="top-right" reverseOrder={false} />
   useGSAP(() => {
@@ -946,6 +945,8 @@ gsap.from(project.chars, {
     // return () => media.revert();
   }, []);
 
+  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -1025,12 +1026,12 @@ gsap.from(project.chars, {
 
   return (
     <>
-      <div className="w-full wrapper mt-0 mb-0 p-2 overflow-hidden bg-black">
+      <div className="w-full  mt-0 mb-0 p-2 overflow-hidden bg-black">
         <Nav />
         <div
         id="scrollContainer"
           ref={containerRef}
-          className="w-full content p-0 m-0 overflow-x-hidden    relative  h-full      "
+          className="w-full h-screen  overflow-x-hidden    relative        "
         >
           <div
             id="section"
@@ -1097,7 +1098,7 @@ gsap.from(project.chars, {
             </div>
           </div>
         </div>
-        <div className="w-full content py-1 bg-black ">
+        <div className="w-full py-1 bg-black ">
           <div className="w-full py-2 bg-black">
             <h1 className="aboutHeading techStack text-center text-4xl sm:text-[45px] md:text-[60px] lg:text-[90px]  text-[#F4CE14] font-normal">
               Tech Stack
