@@ -111,8 +111,8 @@ function App() {
         scrollTrigger: {
           trigger: aboutPara.words,
           markers: false,
-          start: "3600% 100%",
-          end: "3700% 100%",
+          start: "3400% 100%",
+          end: "3500% 100%",
           scrub: 1.5,
         },
       });
@@ -1067,7 +1067,7 @@ gsap.from(project.chars, {
               <h1 className="aboutHeading text-center text-4xl sm:text-[45px] md:text-[60px]   text-[#F4CE14]">
                 About ME !
               </h1>
-              <h2 className="aboutPara text-xl sm:text-2xl md:text-3xl mt-6 text-[#F5F7F8]">
+              <h2 className="aboutPara text-md sm:text-2xl md:text-3xl mt-6 text-[#F5F7F8]">
                 Hey there! I'm Gaurav Mahajan, a passionate MERN stack developer
                 on a mission to create the world’s best websites — and one day i
                 earn the title of the world’s best web developer.
@@ -1091,9 +1091,9 @@ gsap.from(project.chars, {
           </div>
           <div
             id="section"
-            className="w-full h-screen absolute left-[200vw] top-0  bg-black flex justify-center items-center text-white"
+            className="w-full h-screen absolute left-[194vw] top-0  bg-black flex justify-center items-center text-white"
           >
-            <div className="w-[100%] flex justify-center items-center h-[100%] ">
+            <div className="w-[100%] bg-gray-900 flex justify-center items-center h-[100%] ">
               <h1 className="sectionThreeText text-[#F4CE14] font-extrabold text-[55px] sm:text-7xl md:text-[100px] lg:text-[130px] leading-[1] px-1 text-center">
                 I CONVERT <br /> WHAT-IF <br /> TO <br />
                 REALITY
