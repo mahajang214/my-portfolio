@@ -1023,12 +1023,12 @@ gsap.from(project.chars, {
 
   return (
     <>
-      <div className="w-full overflow-hidden bg-black">
+      <div className="w-full mt-0 mb-0 p-2 overflow-hidden bg-black">
         <Nav />
         <div
         id="scrollContainer"
           ref={containerRef}
-          className="w-full overflow-x-hidden    relative  h-screen      "
+          className="w-full p-0 m-0 overflow-x-hidden    relative  h-screen      "
         >
           <div
             id="section"
