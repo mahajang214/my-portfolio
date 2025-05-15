@@ -1932,7 +1932,7 @@ gsap.from(project.chars, {
             </div>
 
             
-            <div className="bg-[#379777] mt-[30vh] w-full rounded-t-[40px]">
+            <div className="bg-linear-10 to-[#379777] from-[#4ED7F1]  mt-[30vh] w-full rounded-t-[40px]">
               {/* Cards  */}
               <div className="w-full flex justify-center items-center  rounded-2xl flex-col">
                 {isMessageLoading?<Loading/> :<div className="w-[65vw] card py-5 bg-[#4ED7F1] px-4 -translate-y-[28vh] rounded-2xl">
@@ -2004,7 +2004,7 @@ gsap.from(project.chars, {
                   MAHAJAN
                 </h1>
               </div>
-              <div className="bg-black py-4 w-full rounded-t-[30px] md:rounded-t-[50px] flex justify-center items-center text-xl text-[#379777]">
+              <div className="bg-black py-4 w-full rounded-t-[30px] md:rounded-t-[50px] flex justify-center items-center text-xl text-[#4ED7F1]">
                 <h2 className="text-sm ">©2025 Gaurav Mahajan.All rights reserved.</h2>
               </div>
             </div>
