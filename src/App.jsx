@@ -5,6 +5,7 @@ import Nav from "./Components/Nav/Nav";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {ScrollSmoother} from 'gsap/ScrollSmoother';
 import { useEffect, useRef } from "react";
 import { SplitText } from "gsap/SplitText";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
@@ -14,6 +15,7 @@ import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import Notification from "./Notification";
 import Loading from "./Components/Loading";
+import SmoothScroll from "./Components/SmoothScroll";
 
 
 
@@ -27,7 +29,15 @@ function App() {
   const [openSocialMediaWeb, setOpenSocialMediaWeb] = useState(false);
 
   <Toaster position="top-right" reverseOrder={false} />
+  // useEffect(() => {
+  //   ScrollSmoother.create({
+  //     wrapper: '.wrapper',
+  //     content: '.content',
+  //     smooth: 1.5, // seconds it takes to "catch up"
+  //   });
+  // }, []);
   useGSAP(() => {
+  
     const media = gsap.matchMedia();
 
     const sections = gsap.utils.toArray("#section");
@@ -1037,8 +1047,8 @@ gsap.from(project.chars, {
  
 
   return (
-    <>
-      <div className="w-full  mt-0 mb-0  overflow-hidden bg-black">
+    <><SmoothScroll>
+      <div className="w-full   mt-0 mb-0  overflow-hidden bg-black">
         <Nav />
         <div
         id="scrollContainer"
@@ -1100,7 +1110,7 @@ gsap.from(project.chars, {
           </div>
           <div
             id="section"
-            className="w-full h-screen absolute left-[194vw] top-0  bg-black flex justify-center items-center text-white"
+            className="w-full h-screen absolute left-[200vw] top-0  bg-black flex justify-center items-center text-white"
           >
             <div className="w-[100%]  flex justify-center items-center h-[100%] ">
               <h1 className="sectionThreeText text-[#F4CE14] font-extrabold text-[55px] sm:text-7xl md:text-[100px] lg:text-[130px] leading-[1] px-1 text-center">
@@ -1110,7 +1120,7 @@ gsap.from(project.chars, {
             </div>
           </div>
         </div>
-        <div className="w-full py-1 bg-black ">
+        <div className="w-full py-1  bg-black ">
           <div className="w-full py-2 bg-black">
             <h1 className="aboutHeading techStack text-center text-4xl sm:text-[45px] md:text-[60px] lg:text-[90px]  text-[#F4CE14] font-normal">
               Tech Stack
@@ -2011,6 +2021,7 @@ gsap.from(project.chars, {
           </div>
         </div>
       </div>
+      </SmoothScroll>
     </>
   );
 }

@@ -14,6 +14,7 @@
   "homepage": "https://mahajang214.github.io/my-portfolio",
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.1.5",
     "axios": "^1.9.0",
     "framer-motion": "^12.11.0",
