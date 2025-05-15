@@ -35,3 +35,8 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.colored{
+    background: linear-gradient(145deg, #ffffff4b, #0000001d);
+
+}

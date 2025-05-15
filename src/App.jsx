@@ -13,6 +13,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import Notification from "./Notification";
+import Loading from "./Components/Loading";
 
 
 
@@ -244,7 +245,7 @@ function App() {
           revealDelay: 0.02,
           speed: 10,
         },
-        color: "black",
+        color: "white",
         scrollTrigger: {
           trigger: ".cyberSecurity",
           start: "0px 100%",
@@ -514,7 +515,7 @@ gsap.from(project.chars, {
           revealDelay: 0.02,
           speed: 10,
         },
-        color: "black",
+        color: "white",
         scrollTrigger: {
           trigger: ".cyberSecurity",
           start: "0px 100%",
@@ -785,7 +786,7 @@ gsap.from(project.chars, {
           revealDelay: 0.02,
           speed: 10,
         },
-        color: "black",
+        color: "white",
         scrollTrigger: {
           trigger: ".cyberSecurity",
           start: "0px 100%",
@@ -958,6 +959,8 @@ gsap.from(project.chars, {
   });
   const [msg, setMsg] = useState(null);
   const [notification, setNotification] = useState(null);
+  const [isFeedbackLoading, setIsFeedbackLoading] = useState(false);
+  const [isMessageLoading, setIsMessageLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -978,12 +981,15 @@ gsap.from(project.chars, {
       return  setNotification({ type: "error", message: "Number is Empty." });
     }
     try {
+      setIsMessageLoading(true);
       const sendMail=await axios.post(`${import.meta.env.VITE_BASE_URL}/send-mail`,formData);
       console.log(sendMail.data);
+      setIsMessageLoading(false);
   
     return  setNotification({ type: "success", message: "Message sent successfully!" });
       
     } catch (error) {
+      setIsMessageLoading(false);
       console.error(error.message);
      return setNotification({ type: "error", message: "Failed to send message." });
     }
@@ -1004,8 +1010,10 @@ gsap.from(project.chars, {
       return  setNotification({ type: "error", message: "Feedback is Empty." });
     }
     try {
+      setIsFeedbackLoading(true);
       const sendFeedback=await axios.post(`${import.meta.env.VITE_BASE_URL}/feedback`,{message:msg});
       console.log(sendFeedback.data);
+      setIsFeedbackLoading(false);
   
       setNotification({ type: "success", message: "Feedback sended successfully!" });
       setTimeout(() => {
@@ -1013,6 +1021,7 @@ gsap.from(project.chars, {
       }, 4000);
       
     } catch (error) {
+      setIsFeedbackLoading(false);
       console.error(error.message);
     return  setNotification({ type: "error", message: "Failed to send feedback." });
     }
@@ -1029,7 +1038,7 @@ gsap.from(project.chars, {
 
   return (
     <>
-      <div className="w-full  mt-0 mb-0 p-2 overflow-hidden bg-black">
+      <div className="w-full  mt-0 mb-0  overflow-hidden bg-black">
         <Nav />
         <div
         id="scrollContainer"
@@ -1108,7 +1117,10 @@ gsap.from(project.chars, {
             </h1>
             <div className="w-full py-1 flex justify-center items-center ">
               <div className=" mt-10 w-[65vw] h-[25vh] sm:h-[25vh] flex justify-between items-center ">
-                <div className="bg-[#379777] h-full py-4 w-[30vw]   lg:w-[20vw] rounded-2xl">
+{/* {<Loading/>} */}
+                {/* bg-[#ffffff27] bg-[#379777]  bg-linear-to-tl from-[#ffffff0a] from-10%  to-[#ffffff84] */}
+                {/* done : bg-linear-to-tl to-[#ffffff40] from-[#ffffff09] */}
+                <div className="bg-linear-to-tl to-[#ffffff35] border-2  border-[#ffffff30]  h-full py-4 w-[30vw]   lg:w-[20vw] rounded-2xl">
                   <h1 className="text-center text-3xl sm:text-4xl text-white">
                     UI/UX
                   </h1>
@@ -1124,7 +1136,7 @@ gsap.from(project.chars, {
                     </h1>
                   </div>
                 </div>
-                <div className="bg-[#379777]  h-full py-4 w-[30vw]  lg:w-[20vw] rounded-2xl">
+                <div className="bg-linear-to-tl to-[#ffffff35] border-2  border-[#ffffff30] h-full py-4 w-[30vw]  lg:w-[20vw] rounded-2xl">
                   <h1 className="text-center  text-3xl sm:text-4xl text-white">
                     Service
                   </h1>
@@ -1143,7 +1155,7 @@ gsap.from(project.chars, {
             </div>
             <div className="w-full  py-1 flex justify-center items-center flex-col ">
               {/* Frontend */}
-              <div className="bg-[#379777]  w-[90%] py-5 mt-7 rounded-2xl">
+              <div className="bg-linear-to-tl to-[#ffffff38] border-[1.5px]   border-[#ffffff40]  w-[90%] py-5 mt-7 rounded-2xl">
                 <h1 className="text-white text-3xl sm:text-4xl text-center">
                   Frontend
                 </h1>
@@ -1484,7 +1496,7 @@ gsap.from(project.chars, {
               </div>
 
               {/* Backend */}
-              <div className="bg-[#379777]   w-[90%] py-5 mt-10 rounded-2xl">
+              <div className="bg-linear-to-br to-[#ffffff35] border-2  border-[#ffffff30]  w-[90%] py-5 mt-10 rounded-2xl">
                 <h1 className="text-white text-3xl sm:text-4xl text-center">
                   Backend
                 </h1>
@@ -1564,7 +1576,7 @@ gsap.from(project.chars, {
               </div>
 
               {/* OS */}
-              <div className="bg-[#379777]   w-[90%] py-5 mt-10 rounded-2xl">
+              <div className="bg-linear-to-tr to-[#ffffff35] border-2  border-[#ffffff30]   w-[90%] py-5 mt-10 rounded-2xl">
                 <h1 className="text-white text-3xl sm:text-4xl text-center">
                   Operating Systems
                 </h1>
@@ -1616,7 +1628,7 @@ gsap.from(project.chars, {
               </div>
 
               {/* Development Software */}
-              <div className="bg-[#379777]   w-[90%] py-5 mt-10 rounded-2xl">
+              <div className="bg-linear-to-bl to-[#ffffff35] border-2  border-[#ffffff30]  w-[90%] py-5 mt-10 rounded-2xl">
                 <h1 className="text-white text-3xl sm:text-4xl text-center">
                   Development Software
                 </h1>
@@ -1682,8 +1694,8 @@ gsap.from(project.chars, {
               </div>
 
               {/* CyberSecurity Tools */}
-              <div className="bg-[#379777]   w-[90%] py-5 mt-10  rounded-2xl">
-                <h1 className="cyberSecurity text-white text-3xl sm:text-4xl text-center">
+              <div className="bg-linear-to-tl to-[#ffffff35] border-2  border-[#ffffff30]   w-[90%] py-5 mt-10  rounded-2xl">
+                <h1 className="cyberSecurity text-black text-3xl sm:text-4xl text-center">
                   CyberSecurity Tools
                 </h1>
                 <div className="w-full py-1   flex justify-center items-center ">
@@ -1734,7 +1746,7 @@ gsap.from(project.chars, {
               </div>
 
               {/* Hosting Platforms */}
-              <div className="bg-[#379777]   w-[90%] py-5 mt-10 rounded-2xl">
+              <div className="bg-linear-to-b to-[#ffffff30] border-2  border-[#ffffff30]  w-[90%] py-5 mt-10 rounded-2xl">
                 <h1 className="text-white text-3xl sm:text-4xl text-center">
                   Hosting Platforms
                 </h1>
@@ -1923,7 +1935,7 @@ gsap.from(project.chars, {
             <div className="bg-[#379777] mt-[30vh] w-full rounded-t-[40px]">
               {/* Cards  */}
               <div className="w-full flex justify-center items-center  rounded-2xl flex-col">
-                <div className="w-[65vw] card py-5 bg-[#4ED7F1] px-4 -translate-y-[28vh] rounded-2xl">
+                {isMessageLoading?<Loading/> :<div className="w-[65vw] card py-5 bg-[#4ED7F1] px-4 -translate-y-[28vh] rounded-2xl">
                   <h1 className="  text-center text-3xl sm:text-[45px] md:text-[60px] lg:text-[90px]  text-[#000] font-normal">
                     Connect with ME
                   </h1>
@@ -1964,9 +1976,10 @@ gsap.from(project.chars, {
                   </button>
                   </form>
                  
-                </div>
+                </div>}
 
-                <div className="w-[65vw] rounded-2xl -translate-y-[25vh] flex ">
+                  {/* Feedback Card */}
+               {isFeedbackLoading?<Loading/>: <div className="w-[65vw] rounded-2xl -translate-y-[25vh] flex ">
                   <input
                     className="bg-white  w-full rounded-l-xl outline-none px-2 md:px-6 py-2 text-md md:text-2xl"
                     type="text"
@@ -1977,7 +1990,7 @@ gsap.from(project.chars, {
                     Send
                   </button>
                 
-                </div>
+                </div>}
               </div>
               {notification && (
         <Notification

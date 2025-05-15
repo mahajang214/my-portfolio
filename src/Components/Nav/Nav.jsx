@@ -14,10 +14,10 @@ function Nav() {
   };
 
   return (
-    <div className="lg:text-2xl md:text-xl text-md w-full py-1.5 bg-[#379777] rounded-b-lg flex text-white justify-between items-center md:px-5 px-3">
-      <span className="uppercase opacity-[.6]">Mahajan</span>
-      <ul className="lg:px-5 md:px-4 px-2 gap-2 sm:gap-5 md:gap-2 lg:gap-3 md:text-lg lg:text-xl pt-2.5  bg-black flex justify-around items-center text-white rounded-lg">
-        <li className=" bg-[#379777] hidden md:block px-2 rounded-sm font-semibold hover:-translate-y-[4.4px] hover:transition-all duration-150 hover:text-black cursor-pointer">
+    <div className="lg:text-2xl md:text-xl text-md w-full py-1.5 bg-linear-to-tl to-[#ffffff35] border-2  border-[#ffffff30] rounded-b-lg flex text-white justify-between items-center md:px-5 px-3">
+      <span className=" text-[#ffffffff] ">Gaurav</span>
+      <ul className="lg:px-5 md:px-4 px-2 gap-2 sm:gap-5 md:gap-2 lg:gap-3 md:text-lg lg:text-xl pt-2.5  bg-black flex justify-around items-center text-[#ffffffD6] rounded-lg">
+        <li className=" bg-linear-to-t to-[#ffffff35] border-2  border-[#ffffff35] hidden md:block px-2 rounded-sm font-semibold hover:-translate-y-[4.4px] hover:transition-all duration-150  cursor-pointer">
           Home
         </li>
         <svg
@@ -51,7 +51,7 @@ function Nav() {
         </svg>
 
         <li
-        onClick={() => window.open("https://github.com/mahajang214", "_blank")} className=" bg-[#379777] hidden md:block px-2 rounded-sm font-semibold hover:-translate-y-[4.4px] hover:transition-all duration-150 hover:text-black cursor-pointer">
+        onClick={() => window.open("https://github.com/mahajang214", "_blank")} className=" bg-linear-to-t to-[#ffffff35] border-2  border-[#ffffff35] hidden md:block px-2 rounded-sm font-semibold hover:-translate-y-[4.4px] hover:transition-all duration-150  cursor-pointer">
           GitHub
         </li>
         <svg
@@ -69,7 +69,7 @@ function Nav() {
           ></path>
         </svg>
 
-        <li onClick={handleDownload} className=" bg-[#379777] hidden md:block px-2 rounded-sm font-semibold hover:-translate-y-[4.4px] hover:transition-all duration-150 hover:text-black cursor-pointer">
+        <li onClick={handleDownload} className=" bg-linear-to-t to-[#ffffff35] border-2  border-[#ffffff35] hidden md:block px-2 rounded-sm font-semibold hover:-translate-y-[4.4px] hover:transition-all duration-150  cursor-pointer">
           Resume
         </li>
         <svg
@@ -143,7 +143,7 @@ function Nav() {
           <path d="M44 52H34V54H44V52Z" fill="black"></path>
         </svg>
 
-        <li onClick={()=>setShowForm(!showForm)} className=" bg-[#379777] hidden md:block px-2 rounded-sm font-semibold hover:-translate-y-[4.4px] hover:transition-all duration-150 hover:text-black cursor-pointer">
+        <li onClick={()=>setShowForm(!showForm)} className=" bg-linear-to-t to-[#ffffff35] border-2  border-[#ffffff35] hidden md:block px-2 rounded-sm font-semibold hover:-translate-y-[4.4px] hover:transition-all duration-150  cursor-pointer">
           Connect
         </li>
         <svg
@@ -195,7 +195,7 @@ function Nav() {
         //   initial={{ borderRadius: "0.375rem" }} // md = 6px
         //   whileHover={{ borderRadius: "9999px" }} // full = rounded-full
         //   transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="px-2.5 lg:px-4 py-1 cursor-pointer bg-transparent hover:bg-black hover:border-black hover:rounded-full overflow-hidden hover:scale-110 hover:duration-300 duration-300 transition-all rounded-md font-semibold border-[1px] border-white text-xs md:text-lg lg:text-xl text-white"
+        className="px-2.5 lg:px-4 py-1 cursor-pointer bg-transparent hover:text-green-500 hover:border-green-500 hover:rounded-full overflow-hidden hover:scale-110 hover:duration-300 duration-300 transition-all rounded-md font-semibold border-[1px] border-white text-xs md:text-lg lg:text-xl text-white"
       >
         Hire Me
       </motion.button>
