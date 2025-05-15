@@ -2,12 +2,15 @@ import { motion } from "framer-motion";
 import React,{useState} from "react";
 import { downloadDocument } from "../../utils/downloadFile";
 import ConnectForm from "../../utils/ConnectForm";
+import resume from '../../assets/finalResume.docx'
+
+
 
 function Nav() {
 
   const [showForm, setShowForm] = useState(false);
   const handleDownload = () => {
-    downloadDocument('/home/gaurav/Downloads/gourav/fedoraLapi/NewResume.pdf', 'Gaurav_Resume.pdf');
+    downloadDocument(resume, 'Gaurav_Resume.pdf');
   };
 
   return (
